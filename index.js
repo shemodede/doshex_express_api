@@ -17,7 +17,6 @@ var corsOptions = {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-console.log(config.PASSWORD);
 const db_conn = { host: config.HOST, port: config.PORT, user: config.USER, password: config.PASSWORD }
 const connection = mysql.createConnection(db_conn);
 connection.query(`CREATE DATABASE IF NOT EXISTS \`${config.DB}\`;`);

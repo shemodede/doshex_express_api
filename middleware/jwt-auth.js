@@ -4,7 +4,6 @@ const db = require("../models");
 const User = db.user;
 
 verifyToken = (req, res, next) => {
-    console.log("HIT TEST BIT");
     let token = req.headers["x-access-token"];
 
     if (!token) {
